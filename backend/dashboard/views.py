@@ -13,22 +13,15 @@ from applications.permissions import IsCandidate
 
 class RecruiterDashboardView(APIView):
 
-    permission_classes = [
-        IsAuthenticated,
-        IsRecruiter,
-    ]
+    permission_classes = [IsAuthenticated, IsRecruiter]
 
     def get(self, request):
 
         recruiter = request.user.recruiter_profile
 
-        jobs = Job.objects.filter(
-            company=recruiter
-        )
+        jobs = Job.objects.filter(company=recruiter)
 
-        applications = Application.objects.filter(
-            job__company=recruiter
-        )
+        applications = Application.objects.filter(job__company=recruiter)
 
         data = {
 
@@ -54,10 +47,7 @@ class RecruiterDashboardView(APIView):
 
 class CandidateDashboardView(APIView):
 
-    permission_classes = [
-        IsAuthenticated,
-        IsCandidate,
-    ]
+    permission_classes = [IsAuthenticated, IsCandidate]
 
     def get(self, request):
 

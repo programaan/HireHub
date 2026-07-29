@@ -14,14 +14,41 @@ class JobSerializer(serializers.ModelSerializer):
         read_only=True,
     )
 
+    company_description = serializers.CharField(
+        source="company.company_description",
+        read_only=True,
+    )
+
+    company_website = serializers.CharField(
+        source="company.company_website",
+        read_only=True,
+    )
+
+    company_logo = serializers.ImageField(
+        source="company.company_logo",
+        read_only=True,
+    )
+
+    company_location = serializers.CharField(
+        source="company.location",
+        read_only=True,
+    )
+
     class Meta:
+
         model = Job
 
         fields = [
             "id",
             "title",
+
             "company",
             "company_name",
+            "company_description",
+            "company_website",
+            "company_logo",
+            "company_location",
+
             "description",
             "location",
             "salary",
@@ -38,6 +65,10 @@ class JobSerializer(serializers.ModelSerializer):
             "id",
             "company",
             "company_name",
+            "company_description",
+            "company_website",
+            "company_logo",
+            "company_location",
             "created_at",
             "updated_at",
         ]

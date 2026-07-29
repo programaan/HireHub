@@ -2,6 +2,8 @@ from rest_framework import serializers
 from .models import User
 from django.contrib.auth import authenticate
 
+from profiles.models import CandidateProfile, RecruiterProfile
+
 
 class RegisterSerializer(serializers.ModelSerializer):
 
@@ -74,12 +76,69 @@ class LoginSerializer(serializers.Serializer):
 
         return attrs
 
+
 class UserSerializer(serializers.ModelSerializer):
+
+    profile_picture = serializers.SerializerMethodField()
+
+    company_logo = serializers.SerializerMethodField()
+
     class Meta:
+
         model = User
+
         fields = (
+
             "id",
             "full_name",
             "email",
             "role",
+
+            "profile_picture",
+            "company_logo",
+
         )
+
+    def get_profile_picture(self, obj):
+
+        if obj.role == "candidate":
+
+            profile = getattr(obj, "candidate_profile", None)
+
+            if profile and profile.profile_picture:
+
+                return profile.profile_picture.url
+
+        return None
+
+    def get_company_logo(self, obj):
+
+        if obj.role == "recruiter":
+
+            profile = getattr(obj, "recruiter_profile", None)
+
+            if profile and profile.company_logo:
+
+                return profile.company_logo.url
+
+        return None
+
+class ResetPasswordSerializer(serializers.Serializer):
+
+    password = serializers.CharField(
+        min_length=8,
+        write_only=True,
+    )
+
+    confirm_password = serializers.CharField(
+        write_only=True,
+    )
+
+    def validate(self, attrs):
+
+        if attrs["password"] != attrs["confirm_password"]:
+            raise serializers.ValidationError(
+                "Passwords do not match."
+            )
+
+        return attrs

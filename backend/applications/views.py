@@ -1,5 +1,6 @@
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.exceptions import ValidationError
 
 from .models import Application
 from .serializers import (
@@ -7,7 +8,7 @@ from .serializers import (
     RecruiterApplicationSerializer,
     ApplicationStatusSerializer,
 )
-from .permissions import IsCandidate
+from .permissions import IsCandidate, IsApplicationRecruiter
 from jobs.permissions import IsRecruiter
 
 
@@ -28,8 +29,22 @@ class ApplicationListCreateView(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
 
+        candidate = self.request.user.candidate_profile
+        job = serializer.validated_data["job"]
+
+        if Application.objects.filter(
+            job=job,
+            candidate=candidate
+        ).exists():
+
+            raise ValidationError(
+                {
+                    "detail": "You have already applied for this job."
+                }
+            )
+
         serializer.save(
-            candidate=self.request.user.candidate_profile
+            candidate=candidate
         )
 
 class JobApplicationsView(generics.ListAPIView):
@@ -55,8 +70,7 @@ class ApplicationStatusUpdateView(generics.UpdateAPIView):
     serializer_class = ApplicationStatusSerializer
 
     permission_classes = [
-        IsAuthenticated,
-        IsRecruiter,
+        IsApplicationRecruiter,
     ]
 
     def get_queryset(self):

@@ -38,9 +38,11 @@ def _send_email(subject, html, email):
 
     result = mailjet.send.create(data=data)
 
+    print("STATUS:", result.status_code)
+    print("RESPONSE:", result.json())
+
     if result.status_code not in (200, 201):
-        logger.error(result.json())
-        raise Exception("Mailjet failed to send email.")
+        raise Exception("Mailjet failed.")
 
 
 def send_verification_email(email, verify_link):
@@ -54,6 +56,22 @@ def send_verification_email(email, verify_link):
 
     _send_email(
         "Verify your HireHub account",
+        html,
+        email,
+    )
+
+
+def send_password_reset_email(email, reset_link):
+
+    html = render_to_string(
+        "emails/reset_password.html",
+        {
+            "reset_link": reset_link,
+        },
+    )
+
+    _send_email(
+        "Reset your HireHub password",
         html,
         email,
     )

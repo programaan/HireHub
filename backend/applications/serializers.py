@@ -5,6 +5,11 @@ from .models import Application
 
 class ApplicationSerializer(serializers.ModelSerializer):
 
+    company_name = serializers.CharField(
+        source="job.recruiter.company_name",
+        read_only=True,
+    )
+
     candidate_name = serializers.CharField(
         source="candidate.user.full_name",
         read_only=True,
@@ -27,6 +32,7 @@ class ApplicationSerializer(serializers.ModelSerializer):
             "id",
             "job",
             "job_title",
+            "company_name",
             "candidate",
             "candidate_name",
             "candidate_email",

@@ -1,0 +1,333 @@
+/* COMPANY PROFILE */
+
+.company-profile-page{
+    padding:70px 0;
+    background:#f8fafc;
+    min-height:100vh;
+}
+
+.company-profile-box{
+    width:min(1200px,95%);
+    margin:auto;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:24px;
+    padding:45px;
+    box-shadow:0 15px 45px rgba(15,23,42,.06);
+}
+
+.company-profile-box h1{
+    font-size:38px;
+    font-weight:700;
+    color:var(--heading);
+    margin-bottom:10px;
+}
+
+.company-profile-box .profile-subtitle{
+    color:var(--text);
+    margin-bottom:35px;
+    font-size:16px;
+}
+
+.company-profile-form{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:40px;
+    align-items:flex-start;
+}
+
+.company-profile-sidebar{
+    background:#f8fafc;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    position:static;
+    top:100px;
+}
+
+.company-profile-sidebar h3{
+    font-size:22px;
+    margin-bottom:25px;
+    color:var(--heading);
+}
+
+.company-preview,
+.company-placeholder{
+    width:180px;
+    height:180px;
+    margin:auto;
+    border-radius:20px;
+}
+
+.company-preview{
+    object-fit:cover;
+    border:2px solid var(--border);
+    margin-bottom:20px;
+}
+
+.company-placeholder{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#eef2f7;
+    color:#64748b;
+    border:2px dashed #cbd5e1;
+    margin-bottom:20px;
+}
+
+.company-profile-sidebar label{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:48px;
+    background:var(--primary);
+    color:#fff;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.company-profile-sidebar label:hover{
+    background:var(--primary-dark);
+}
+
+.company-profile-sidebar input[type=file]{
+    display:none;
+}
+
+.company-profile-content{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.company-profile-content .readonly-fields{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.company-profile-content .readonly-fields input{
+    background:#f3f6fb;
+    color:#64748b;
+    cursor:not-allowed;
+}
+
+.company-profile-content input,
+.company-profile-content textarea{
+    width:100%;
+    padding:16px 18px;
+    border:1px solid var(--border);
+    border-radius:12px;
+    font-size:15px;
+    font-family:inherit;
+    outline:none;
+    transition:.3s;
+}
+
+.company-profile-content textarea{
+    min-height:180px;
+    resize:vertical;
+}
+
+.company-profile-content input:focus,
+.company-profile-content textarea:focus{
+    border-color:var(--primary);
+    box-shadow:0 0 0 4px rgba(37,99,235,.08);
+}
+
+.company-profile-content button{
+    margin-top:10px;
+    height:55px;
+    border:none;
+    border-radius:14px;
+    background:var(--primary);
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.company-profile-content button:hover{
+    background:var(--primary-dark);
+}
+
+.company-readonly-fields{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.company-readonly-fields input{
+    background:#f3f6fb;
+}
+
+
+/* CANDIDATE PROFILE */
+
+.candidate-profile-page{
+    padding:70px 0;
+    background:#f8fafc;
+    min-height:100vh;
+}
+
+.candidate-profile-box{
+    width:min(1200px,95%);
+    margin:auto;
+    background:#fff;
+    border:1px solid #e8edf5;
+    border-radius:24px;
+    padding:45px;
+    box-shadow:0 15px 45px rgba(15,23,42,.06);
+}
+
+.candidate-profile-box h1{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.candidate-profile-box .profile-subtitle{
+    margin-bottom:35px;
+    color:#64748b;
+}
+
+.candidate-profile-form{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:40px;
+    align-items:flex-start;
+}
+
+.candidate-profile-left{
+    background:#f8fafc;
+    border:1px solid #e5e7eb;
+    border-radius:20px;
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+    position:static;
+    top:100px;
+}
+
+.candidate-preview,
+.candidate-preview-placeholder{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+}
+
+.candidate-preview{
+    object-fit:cover;
+    border:5px solid #fff;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.candidate-preview-placeholder{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#eef2f7;
+    color:#94a3b8;
+}
+
+.candidate-profile-left label{
+    width:100%;
+    font-weight:600;
+    color:#374151;
+}
+
+.candidate-profile-left input[type=file]{
+    width:100%;
+    padding:12px;
+    border:2px dashed #cbd5e1;
+    border-radius:12px;
+    background:#fff;
+}
+
+.resume-btn{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:12px;
+    border-radius:10px;
+    background:var(--primary);
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.resume-btn:hover{
+    background:var(--primary-dark);
+}
+
+.candidate-profile-right{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.candidate-profile-right .readonly-fields{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.candidate-profile-right .readonly-fields input{
+    background:#f3f4f6;
+    color:#6b7280;
+    cursor:not-allowed;
+}
+
+.candidate-profile-right input,
+.candidate-profile-right textarea{
+    width:100%;
+    padding:15px 18px;
+    border:1px solid #dbe4f0;
+    border-radius:12px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+.candidate-profile-right textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+.candidate-profile-right input:focus,
+.candidate-profile-right textarea:focus{
+    border-color:var(--primary);
+    box-shadow:0 0 0 4px rgba(37,99,235,.08);
+}
+
+.candidate-profile-right button{
+    height:55px;
+    border:none;
+    border-radius:12px;
+    background:var(--primary);
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.candidate-profile-right button:hover{
+    background:var(--primary-dark);
+}
+
+.candidate-readonly-fields{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.candidate-readonly-fields input{
+    background:#f3f4f6;
+}
+

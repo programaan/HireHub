@@ -1,0 +1,285 @@
+/* =====================================================
+        CANDIDATE APPLICATIONS
+===================================================== */
+
+.candidate-applications-page{
+    max-width:1100px;
+    margin:60px auto;
+    padding:0 20px;
+    min-height:70vh;
+}
+
+.candidate-applications-page h1{
+    font-size:34px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:8px;
+}
+
+.candidate-applications-subtitle{
+    color:#64748b;
+    margin-bottom:35px;
+    font-size:15px;
+}
+
+.candidate-applications-empty{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:18px;
+    padding:70px 30px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(15,23,42,.05);
+}
+
+.candidate-applications-empty h3{
+    font-size:26px;
+    margin-bottom:10px;
+    color:#111827;
+}
+
+.candidate-applications-empty p{
+    color:#64748b;
+    margin-bottom:25px;
+}
+
+.candidate-applications-browse-btn{
+    display:inline-block;
+    padding:12px 24px;
+    background:var(--primary);
+    color:#fff;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.candidate-applications-browse-btn:hover{
+    background:var(--primary-dark);
+}
+
+.candidate-applications-card{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:18px;
+    padding:25px;
+    margin-bottom:22px;
+    box-shadow:0 8px 25px rgba(15,23,42,.05);
+}
+
+.candidate-applications-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:20px;
+    margin-bottom:20px;
+}
+
+.candidate-applications-header h2{
+    font-size:22px;
+    color:#111827;
+    margin-bottom:6px;
+}
+
+.candidate-applications-header p{
+    color:#64748b;
+    margin:4px 0;
+}
+
+.candidate-applications-status{
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+    text-transform:capitalize;
+}
+
+.candidate-applications-status.pending{
+    background:#FEF3C7;
+    color:#B45309;
+}
+
+.candidate-applications-status.accepted{
+    background:#DCFCE7;
+    color:#15803D;
+}
+
+.candidate-applications-status.rejected{
+    background:#FEE2E2;
+    color:#B91C1C;
+}
+
+.candidate-applications-view-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:11px 20px;
+    border-radius:10px;
+    background:var(--primary);
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.candidate-applications-view-btn:hover{
+    background:var(--primary-dark);
+}
+
+
+/* =====================================================
+        RECRUITER JOB APPLICATIONS
+===================================================== */
+
+.recruiter-job-applications-page{
+    max-width:1200px;
+    margin:60px auto;
+    padding:0 20px;
+    min-height:70vh;
+}
+
+.recruiter-job-applications-page h1{
+    font-size:34px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:8px;
+}
+
+.recruiter-job-applications-subtitle{
+    color:#64748b;
+    margin-bottom:35px;
+    font-size:15px;
+}
+
+.recruiter-job-applications-empty{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:18px;
+    padding:70px 30px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(15,23,42,.05);
+}
+
+.recruiter-job-applications-empty h3{
+    font-size:26px;
+    margin-bottom:10px;
+}
+
+.recruiter-job-applications-empty p{
+    color:#64748b;
+}
+
+.recruiter-job-applications-card{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:18px;
+    padding:28px;
+    margin-bottom:25px;
+    box-shadow:0 8px 25px rgba(15,23,42,.05);
+}
+
+.recruiter-job-applications-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:20px;
+    margin-bottom:20px;
+}
+
+.recruiter-job-applications-header h2{
+    font-size:22px;
+    margin-bottom:6px;
+    color:#111827;
+}
+
+.recruiter-job-applications-header p{
+    color:#64748b;
+    margin:4px 0;
+}
+
+.recruiter-job-applications-status{
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+    text-transform:capitalize;
+}
+
+.recruiter-job-applications-status.pending{
+    background:#FEF3C7;
+    color:#B45309;
+}
+
+.recruiter-job-applications-status.accepted{
+    background:#DCFCE7;
+    color:#15803D;
+}
+
+.recruiter-job-applications-status.rejected{
+    background:#FEE2E2;
+    color:#B91C1C;
+}
+
+.recruiter-job-applications-card h3{
+    margin:18px 0 10px;
+    color:#111827;
+}
+
+.recruiter-job-applications-card p{
+    color:#475569;
+    line-height:1.7;
+}
+
+.recruiter-job-applications-resume-btn{
+    display:inline-block;
+    margin-top:18px;
+    padding:11px 20px;
+    border-radius:10px;
+    background:var(--primary);
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.recruiter-job-applications-resume-btn:hover{
+    background:var(--primary-dark);
+}
+
+.recruiter-job-applications-actions{
+    display:flex;
+    gap:15px;
+    margin-top:25px;
+}
+
+.recruiter-job-applications-accept,
+.recruiter-job-applications-reject{
+    border:none;
+    padding:12px 24px;
+    border-radius:10px;
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.recruiter-job-applications-accept{
+    background:#16A34A;
+}
+
+.recruiter-job-applications-accept:hover:not(:disabled){
+    background:#15803D;
+}
+
+.recruiter-job-applications-reject{
+    background:#DC2626;
+}
+
+.recruiter-job-applications-reject:hover:not(:disabled){
+    background:#B91C1C;
+}
+
+.recruiter-job-applications-accept:disabled,
+.recruiter-job-applications-reject:disabled{
+    opacity:.55;
+    cursor:not-allowed;
+}
+

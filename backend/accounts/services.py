@@ -4,7 +4,10 @@ from django.utils.encoding import force_bytes
 from django.conf import settings
 
 from .tokens import email_verification_token
-from .emails import send_verification_email
+from .emails import (
+    send_verification_email,
+    send_password_reset_email,
+)
 
 
 def send_account_verification(user):
@@ -23,4 +26,12 @@ def send_account_verification(user):
     send_verification_email(
         user.email,
         verify_link,
+    )
+
+
+def send_reset_email(email, reset_link):
+
+    send_password_reset_email(
+        email,
+        reset_link,
     )

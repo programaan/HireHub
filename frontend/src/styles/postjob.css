@@ -1,0 +1,181 @@
+/* ==================================
+   POST JOB / EDIT JOB
+================================== */
+
+.post-job-page,
+.edit-job-page{
+    min-height:calc(100vh - 160px);
+    background:#F8FAFC;
+    padding:60px 20px;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+.post-job-box,
+.edit-job-box{
+    width:100%;
+    max-width:960px;
+    background:#fff;
+    border:1px solid #E5E7EB;
+    border-radius:22px;
+    padding:42px;
+    box-shadow:0 15px 40px rgba(15,23,42,.08);
+}
+
+.post-job-box h1,
+.edit-job-box h1{
+    font-size:34px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:10px;
+}
+
+.post-job-subtitle,
+.edit-job-subtitle{
+    color:#64748B;
+    font-size:16px;
+    line-height:1.6;
+    margin-bottom:35px;
+}
+
+.post-job-box form,
+.edit-job-box form{
+    display:flex;
+    flex-direction:column;
+    gap:32px;
+}
+
+/* ==================================
+        SECTION
+================================== */
+
+.form-section{
+    border:1px solid #E5E7EB;
+    border-radius:16px;
+    padding:24px;
+    background:#fff;
+}
+
+.form-section h3{
+    font-size:20px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:22px;
+    padding-bottom:14px;
+    border-bottom:1px solid #EEF2F7;
+}
+
+/* ==================================
+        GRID
+================================== */
+
+.post-job-row,
+.edit-job-row{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.post-job-row + .post-job-row,
+.edit-job-row + .edit-job-row{
+    margin-top:20px;
+}
+
+/* ==================================
+        INPUT GROUP
+================================== */
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.input-group label{
+    font-size:14px;
+    font-weight:600;
+    color:#374151;
+}
+
+.input-group label span{
+    color:#EF4444;
+}
+
+/* ==================================
+        INPUTS
+================================== */
+
+.post-job-box input,
+.post-job-box textarea,
+.post-job-box select,
+.edit-job-box input,
+.edit-job-box textarea,
+.edit-job-box select{
+    width:100%;
+    padding:14px 16px;
+    border:1px solid #CBD5E1;
+    border-radius:12px;
+    font-size:15px;
+    font-family:inherit;
+    color:#111827;
+    background:#fff;
+    transition:.25s;
+}
+
+.post-job-box textarea,
+.edit-job-box textarea{
+    resize:vertical;
+    min-height:180px;
+    max-height:420px;
+}
+
+.post-job-box input::placeholder,
+.post-job-box textarea::placeholder,
+.edit-job-box input::placeholder,
+.edit-job-box textarea::placeholder{
+    color:#94A3B8;
+}
+
+.post-job-box input:focus,
+.post-job-box textarea:focus,
+.post-job-box select:focus,
+.edit-job-box input:focus,
+.edit-job-box textarea:focus,
+.edit-job-box select:focus{
+    outline:none;
+    border-color:var(--primary);
+    box-shadow:0 0 0 4px rgba(37,99,235,.10);
+}
+
+/* ==================================
+        BUTTON
+================================== */
+
+.post-job-box button,
+.edit-job-box button{
+    width:100%;
+    height:56px;
+    margin-top:6px;
+    border:none;
+    border-radius:14px;
+    background:var(--primary);
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.post-job-box button:hover,
+.edit-job-box button:hover{
+    background:var(--primary-dark);
+}
+
+.post-job-box button:disabled,
+.edit-job-box button:disabled{
+    opacity:.65;
+    cursor:not-allowed;
+}
+
+
