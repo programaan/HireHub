@@ -19,7 +19,7 @@ function VerifyEmail() {
         const verify = async () => {
 
             try {
-                await axios.get(`http://127.0.0.1:8000/api/verify-email/${uid}/${token}/`);
+                await api.get(`/verify-email/${uid}/${token}/`);
                 toast.success("Email verified successfully!");
                 navigate("/account");
             } 
