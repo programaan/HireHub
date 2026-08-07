@@ -1,6 +1,4 @@
-/* ==================================
-   POST JOB / EDIT JOB
-================================== */
+/* POST JOB / EDIT JOB */
 
 .post-job-page,
 .edit-job-page{
@@ -46,10 +44,6 @@
     gap:32px;
 }
 
-/* ==================================
-        SECTION
-================================== */
-
 .form-section{
     border:1px solid #E5E7EB;
     border-radius:16px;
@@ -66,10 +60,6 @@
     border-bottom:1px solid #EEF2F7;
 }
 
-/* ==================================
-        GRID
-================================== */
-
 .post-job-row,
 .edit-job-row{
     display:grid;
@@ -81,10 +71,6 @@
 .edit-job-row + .edit-job-row{
     margin-top:20px;
 }
-
-/* ==================================
-        INPUT GROUP
-================================== */
 
 .input-group{
     display:flex;
@@ -101,10 +87,6 @@
 .input-group label span{
     color:#EF4444;
 }
-
-/* ==================================
-        INPUTS
-================================== */
 
 .post-job-box input,
 .post-job-box textarea,
@@ -147,10 +129,6 @@
     border-color:var(--primary);
     box-shadow:0 0 0 4px rgba(37,99,235,.10);
 }
-
-/* ==================================
-        BUTTON
-================================== */
 
 .post-job-box button,
 .edit-job-box button{

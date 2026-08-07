@@ -1,16 +1,10 @@
-/* ===========================
-   JOB DETAILS PAGE
-=========================== */
+/* JOB DETAILS PAGE */
 
 .job-details-page {
   background: #f6f8fc;
   padding: 40px 0 70px;
   min-height: 100vh;
 }
-
-/* ===========================
-   BREADCRUMB
-=========================== */
 
 .job-details-breadcrumb {
   display: flex;
@@ -41,10 +35,6 @@
   color: var(--primary-dark);
 }
 
-/* ===========================
-   LAYOUT
-=========================== */
-
 .job-details-layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -64,10 +54,6 @@
   gap: 24px;
 }
 
-/* ===========================
-   CARDS
-=========================== */
-
 .job-details-card-main,
 .job-details-card,
 .job-details-sidebar-card {
@@ -77,10 +63,6 @@
   box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
   border: 1px solid #e8edf7;
 }
-
-/* ===========================
-   HEADER
-=========================== */
 
 .job-details-top {
   display: flex;
@@ -121,10 +103,6 @@
   font-size: 15px;
   line-height: 1.6;
 }
-
-/* ===========================
-   ACTIONS
-=========================== */
 
 .job-details-actions {
   display: flex;
@@ -173,10 +151,6 @@
   color: var(--primary);
 }
 
-/* ===========================
-   CONTENT
-=========================== */
-
 .job-details-card h2 {
   margin-bottom: 18px;
   color: #111827;
@@ -187,10 +161,6 @@
   color: #64748b;
   line-height: 1.8;
 }
-
-/* ===========================
-   SKILLS
-=========================== */
 
 .job-details-skills {
   display: flex;
@@ -206,10 +176,6 @@
   font-size: 14px;
   font-weight: 600;
 }
-
-/* ===========================
-   SIDEBAR
-=========================== */
 
 .job-details-sidebar-card h3 {
   color: #64748b;
