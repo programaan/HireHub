@@ -4,9 +4,12 @@ import { getJobs } from "../services/jobService";
 
 import FeaturedJobCard from "./FeaturedJobCard";
 
+import Loader from "./Loader";
+
 function FeaturedJobs() {
 
     const [jobs, setJobs] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         loadJobs();
@@ -15,12 +18,17 @@ function FeaturedJobs() {
     const loadJobs = async () => {
 
         try{
+            setLoading(true);
+
             const data = await getJobs();
             setJobs(data.results.slice(0,4));
         }
 
         catch(error){
             console.log(error);
+        }
+        finally {
+            setLoading(false);
         }
 
     };
@@ -35,11 +43,16 @@ function FeaturedJobs() {
 
                 <div className="featured-grid">
 
-                    {
-                        jobs.map((job)=>(
-                            <FeaturedJobCard key={job.id} job={job}/>
+                    {loading ? (
+                        <Loader />
+                    ) : (
+                        jobs.map((job) => (
+                            <FeaturedJobCard
+                                key={job.id}
+                                job={job}
+                            />
                         ))
-                    }
+                    )}
 
                 </div>
 
