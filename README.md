@@ -1,6 +1,7 @@
 # 💼 HireHub — Full Stack Job Portal
 
-<img width="1345" height="683" alt="HireHub" src="https://github.com/user-attachments/assets/575a6e2b-2a37-4f3c-a806-f49b9782af9a" />
+<img width="1345" height="683" alt="HireHub" src="https://github.com/user-attachments/assets/1d69637f-29b0-497c-8ea6-d4e759bc1dbb" />
+
 
 A modern full-stack job portal designed to connect candidates and recruiters through job discovery, applications, saved jobs, recruiter job management, and role-based dashboards.
 
